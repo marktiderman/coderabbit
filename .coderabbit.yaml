@@ -1,19 +1,31 @@
-# Example central configuration
+# Configuration for development teams
+language: "en-US"
+
 reviews:
-  profile: chill
-  request_changes_workflow: true
-  high_level_summary: true
-  poem: false
-  review_status: true
-  collapse_empty_files: true
-  auto_review:
-    enabled: true
-    drafts: false
+profile: "assertive"
+high_level_summary: true
+auto_review:
+enabled: true
+drafts: false
+ignore_title_keywords:
+  - "wip"
+  - "draft"
+tools:
+eslint:
+  enabled: true
+ruff:
+  enabled: true
+gitleaks:
+  enabled: true
+hadolint:
+  enabled: true
 
 chat:
-  auto_reply: false
+auto_reply: true
 
 knowledge_base:
-  learnings:
-    enabled: true
-  opt_out: false
+code_guidelines:
+enabled: true
+filePatterns:
+  - "**/.cursorrules"
+  - "**/CODING_STANDARDS.md"
