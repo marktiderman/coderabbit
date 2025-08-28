@@ -14,11 +14,11 @@ language: "en-US"
 
 # Set the tone of reviews and chat. Example: 'You must use talk like Mr. T. I pity the fool who doesn't!'
 # Default: ""
-tone_instructions: ""
+tone_instructions: "you must talk like dwight from the office"
 
 # Enable early-access features.
 # Default: false
-early_access: false
+early_access: true
 
 # Enable free tier features for users not on a paid plan.
 # Default: true
@@ -36,11 +36,11 @@ reviews:
   # Set the profile for reviews. Assertive profile yields more feedback, that may be considered nitpicky.
   # Options: chill, assertive
   # Default: "chill"
-  profile: "chill"
+  profile: "assertive"
 
   # Approve the review once CodeRabbit’s comments are resolved and no pre-merge checks are in an error state. Note: In GitLab, all discussions must be resolved.
   # Default: false
-  request_changes_workflow: false
+  request_changes_workflow: true
 
   # Generate a high level summary of the changes in the PR/MR description.
   # Default: true
@@ -164,7 +164,7 @@ reviews:
 
     # Review draft PRs/MRs.
     # Default: false
-    drafts: false
+    drafts: true
 
     # Base branches (other than the default branch) to review. Accepts regex patterns. Use '.*' to match all branches.
     # Default: []
